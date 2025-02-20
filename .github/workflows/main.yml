@@ -95,16 +95,16 @@ jobs:
       #     name: allure-report
       #     path: allure-report
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+      # - name: Deploy to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./public
 
 
       - name: Publish Allure Report       # Публикация через сервис GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.MY_GITHUB_TOKEN1 }}
-          publish_dir: target/allure-report
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: allure-report
           publish_branch: gh-pages  # Ветка, на которую будете публиковать
